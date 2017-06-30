@@ -1,0 +1,49 @@
+<body>
+    <div class="header">
+        Today Music
+    </div>
+    
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8qtAY-TDxW4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div class="comment">
+        COMMENT
+    </div>
+    
+    <div class="h1">
+        <a href="/posts/new" style="text-decoration:none; color:white">[new comment]</a>
+    </div>
+    
+    <div class="list">
+        <% @posts.each do |post| %>
+    <div class="content">
+        <a href="/posts/show/<%= post.id %>" style="text-decoration:none; color:white"><%= post.id %> :<%= post.title %></a>
+    </div>
+    <% end %>
+    </div>
+</body>
+
+<style>
+    body{ margin:0; background: black; }
+    
+    .header{    color: white;
+                height: 100px;
+                text-align: center;
+                font-size: 60px; 
+            }
+    .video{     text-align: center;
+           }
+    .comment{    text-align: center;
+                 font-size: 30px;
+                 font-family: verdana;
+                 color:white;
+                 padding: 20px;
+             }
+    .h1{    font-size:15px;
+            margin-left: 430px;
+        }
+    .content{    border-bottom: 2px solid #e0e0e0;
+    
+             }
+</style>

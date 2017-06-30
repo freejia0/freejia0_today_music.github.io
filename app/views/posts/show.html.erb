@@ -1,0 +1,24 @@
+<body>
+    <div class="wrap">
+        <div class="header">POST <%= @post.id %></div>
+        
+        <div class="title">Title : <%= @post.title %></div>
+            
+        <div class="content">Content : <%= @post.content %></div>
+        
+        <div class="list"><a href="/" style="text-decoration:none; color:white">[list]</a></div>
+        <div class="edit"><a href="/posts/edit/<%= @post.id %>" style="text-decoration:none; color:white">[edit]</a></div>
+        <div class="delete"><a href="/posts/destroy/<%= @post.id %>" data-confirm="삭제하시겠습니까?" data-method="post" style="text-decoration:none; color:white">[delete]</a></div>
+    </div>
+</body>
+
+<style>
+    body{    background:black;}
+    .wrap{    color:white; padding:200px;}
+    .header{    font-size:50px; font-family:Arial; margin-bottom:30px;}
+    .title{    font-size:20px; margin-bottom:60px;}
+    .content{    font-size:20px;}
+    .list{    margin-top:70px; margin-left:800px;}
+    .edit{    margin-top:20px; margin-left:800px;}
+    .delete{    margin-top:20px; margin-left:800px;}
+</style>
